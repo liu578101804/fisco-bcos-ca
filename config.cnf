@@ -1,0 +1,32 @@
+[ca]
+default_ca=default_ca
+
+[default_ca]
+default_days = 365
+default_md = sha256
+
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+countryName = CN
+stateOrProvinceName = State or Province Name (full name)
+localityName = Locality Name (eg, city)
+organizationalUnitName = Organizational Unit Name (eg, section)
+commonName =  Organizational  commonName (eg, fisco-bcos)
+commonName_max = 64
+
+countryName_default = CN
+stateOrProvinceName_default =GuangDong
+localityName_default = ShenZhen
+organizationalUnitName_default = fisco-bcos
+commonName_default = fisco-bcos
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+
+[ v4_req ]
+basicConstraints = CA:TRUE
+
